@@ -21,14 +21,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
 /* USER CODE END PTD */
-
+ 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 /* USER CODE END PD */
@@ -39,11 +38,29 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+
+typedef enum {FAILED=0,PASSED=!FAILED} Test_Status;
 SPI_HandleTypeDef hspi1;
-
 UART_HandleTypeDef huart1;
-
 uint8_t RxBuf[1];
+__IO Test_Status TransferStatus1 = FAILED;
+
+
+
+/* 获取缓冲区的长度 */
+#define TxBufferSize1   (countof(TxBuffer1) - 1)
+#define RxBufferSize1   (countof(TxBuffer1) - 1)
+#define countof(a)      (sizeof(a) / sizeof(*(a)))
+#define  BufferSize (countof(Tx_Buffer)-1)
+
+#define  FLASH_WriteAddress     0x00000
+#define  FLASH_ReadAddress      FLASH_WriteAddress
+#define  FLASH_SectorToErase    FLASH_WriteAddress
+
+   
+/* 发送缓冲区初始化 */
+uint8_t Tx_Buffer[] = "Just test";
+uint8_t Rx_Buffer[BufferSize];
 
 
 /* USER CODE BEGIN PV */
@@ -73,6 +90,28 @@ int fgetc(FILE *f)
 	HAL_UART_Receive(&huart1,(uint8_t *)&ch,1,0xFFFF);
 	return ch;
 }
+
+
+/**
+ * @brief  SPI CS Low level
+ * @note   
+ * @retval None
+ */
+Test_Status BufferCmp(uint8_t* pBuffer1,uint8_t* pBuffer2,uint16_t BufferLength)
+{
+	while(BufferLength--)
+	{
+		if(*pBuffer1 != *pBuffer2)
+		{
+			return FAILED;
+		}
+		pBuffer1++;
+		pBuffer2++;
+	}
+	return PASSED;
+}
+
+
 /* USER CODE END 0 */
 
 /**
@@ -82,7 +121,7 @@ int fgetc(FILE *f)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  __IO uint32_t tmp = 0;
+  __IO uint32_t flash_id = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -106,10 +145,31 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  tmp=SPI_FLASH_ReadID();
-	printf("Flash ID:0x%X\n",tmp);
+  flash_id=SPI_FLASH_ReadID();
+	printf("Flash ID:0x%X\n\r",flash_id);
 	UART_Start_Receive_IT(&huart1, (uint8_t *)RxBuf, 1);
   /* USER CODE END 2 */
+	if(flash_id==sFLASH_ID)
+	{
+		SPI_FLASH_SectorErase(0x00000);
+		
+		SPI_FLASH_BufferWrite(Tx_Buffer,0x00000,BufferSize);
+		
+		SPI_FLASH_BufferRead(Rx_Buffer,0x00000,BufferSize);
+		printf("Read Date is :%s\r\n",Rx_Buffer);
+		
+		
+		TransferStatus1= BufferCmp(Tx_Buffer,Rx_Buffer,BufferSize);
+		
+		if(TransferStatus1==PASSED)
+		{
+			printf("flash test succeed!\r\n");
+		}
+		else
+		{
+			printf("flash test failed !\r\n");
+		}
+	}
 	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */

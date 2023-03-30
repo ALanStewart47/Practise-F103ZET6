@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\Core\Bsp\inc;..\Core\Bsp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -543,6 +543,41 @@
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/system_stm32f1xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Application/User/Core/Bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Bsp\src\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Bsp\src\bsp_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Bsp\src\bsp_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_uart_fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Bsp\src\bsp_uart_fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Bsp\bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_msg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Bsp\bsp_msg.c</FilePath>
             </File>
           </Files>
         </Group>

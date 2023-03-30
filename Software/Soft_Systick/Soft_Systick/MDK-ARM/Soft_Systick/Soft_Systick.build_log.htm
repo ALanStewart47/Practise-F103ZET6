@@ -1,0 +1,452 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 ALanStewart, 1, LIC=GMZI6-D4Z1J-12JLE-5X6HF-BBKKH-Q2E8C
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  D:\Pogram Files\keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.32.6.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\ALanStewart\Documents\Practise-F103ZET6\Software\Soft_Systick\Soft_Systick\MDK-ARM\Soft_Systick.uvprojx
+Project File Date:  03/15/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Pogram Files\keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Soft_Systick'
+assembling startup_stm32f103xe.s...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling bsp_key.c...
+..\Core\Bsp\inc\bsp_timer.h(33): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Mode;		/* 计数器模式，1次性 */
+..\Core\Bsp\inc\bsp_timer.h(34): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Flag;		/* 定时到达标志  */
+..\Core\Bsp\inc\bsp_timer.h(35): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t Count;	/* 计数器 */
+..\Core\Bsp\inc\bsp_timer.h(36): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t PreLoad;	/* 计数器预装值 */
+..\Core\Bsp\inc\bsp_timer.h(41): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayMS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(42): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayUS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(45): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StopTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(47): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_GetRunTime(void);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_led.h(19): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(20): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOff(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(21): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedToggle(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_key.h(85): error:  #79: expected a type specifier
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #90: function returning function is not allowed
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #168: a function type is not allowed here
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(87): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  Count;			/* 滤波器计数器 */
+..\Core\Bsp\inc\bsp_key.h(88): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongCount;		/* 长按计数器 */
+..\Core\Bsp\inc\bsp_key.h(89): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongTime;		/* 按键按下持续时间, 0表示不检测长按 */
+..\Core\Bsp\inc\bsp_key.h(90): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  State;			/* 按键当前状态（按下还是弹起） */
+..\Core\Bsp\src\bsp_key.c: 0 warnings, 30 errors
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling main.c...
+../Core/Src/main.c(101): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOB,G_LED_Pin,0);
+../Core/Src/main.c: 1 warning, 0 errors
+compiling bsp_led.c...
+..\Core\Bsp\inc\bsp_timer.h(33): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Mode;		/* 计数器模式，1次性 */
+..\Core\Bsp\inc\bsp_timer.h(34): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Flag;		/* 定时到达标志  */
+..\Core\Bsp\inc\bsp_timer.h(35): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t Count;	/* 计数器 */
+..\Core\Bsp\inc\bsp_timer.h(36): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t PreLoad;	/* 计数器预装值 */
+..\Core\Bsp\inc\bsp_timer.h(41): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayMS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(42): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayUS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(45): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StopTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(47): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_GetRunTime(void);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_led.h(19): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(20): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOff(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(21): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedToggle(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_key.h(85): error:  #79: expected a type specifier
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #90: function returning function is not allowed
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #168: a function type is not allowed here
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(87): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  Count;			/* 滤波器计数器 */
+..\Core\Bsp\inc\bsp_key.h(88): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongCount;		/* 长按计数器 */
+..\Core\Bsp\inc\bsp_key.h(89): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongTime;		/* 按键按下持续时间, 0表示不检测长按 */
+..\Core\Bsp\inc\bsp_key.h(90): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  State;			/* 按键当前状态（按下还是弹起） */
+..\Core\Bsp\src\bsp_led.c: 0 warnings, 30 errors
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal.c...
+compiling bsp_timer.c...
+..\Core\Bsp\inc\bsp_timer.h(33): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Mode;		/* 计数器模式，1次性 */
+..\Core\Bsp\inc\bsp_timer.h(34): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Flag;		/* 定时到达标志  */
+..\Core\Bsp\inc\bsp_timer.h(35): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t Count;	/* 计数器 */
+..\Core\Bsp\inc\bsp_timer.h(36): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t PreLoad;	/* 计数器预装值 */
+..\Core\Bsp\inc\bsp_timer.h(41): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayMS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(42): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayUS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(45): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StopTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(47): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_GetRunTime(void);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_led.h(19): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(20): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOff(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(21): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedToggle(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_key.h(85): error:  #79: expected a type specifier
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #90: function returning function is not allowed
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #168: a function type is not allowed here
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(87): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  Count;			/* 滤波器计数器 */
+..\Core\Bsp\inc\bsp_key.h(88): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongCount;		/* 长按计数器 */
+..\Core\Bsp\inc\bsp_key.h(89): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongTime;		/* 按键按下持续时间, 0表示不检测长按 */
+..\Core\Bsp\inc\bsp_key.h(90): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  State;			/* 按键当前状态（按下还是弹起） */
+..\Core\Bsp\src\bsp_timer.c: 0 warnings, 30 errors
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling bsp_uart_fifo.c...
+..\Core\Bsp\inc\bsp_timer.h(33): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Mode;		/* 计数器模式，1次性 */
+..\Core\Bsp\inc\bsp_timer.h(34): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Flag;		/* 定时到达标志  */
+..\Core\Bsp\inc\bsp_timer.h(35): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t Count;	/* 计数器 */
+..\Core\Bsp\inc\bsp_timer.h(36): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t PreLoad;	/* 计数器预装值 */
+..\Core\Bsp\inc\bsp_timer.h(41): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayMS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(42): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayUS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(45): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StopTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(47): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_GetRunTime(void);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_led.h(19): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(20): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOff(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(21): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedToggle(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_key.h(85): error:  #79: expected a type specifier
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #90: function returning function is not allowed
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #168: a function type is not allowed here
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(87): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  Count;			/* 滤波器计数器 */
+..\Core\Bsp\inc\bsp_key.h(88): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongCount;		/* 长按计数器 */
+..\Core\Bsp\inc\bsp_key.h(89): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongTime;		/* 按键按下持续时间, 0表示不检测长按 */
+..\Core\Bsp\inc\bsp_key.h(90): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  State;			/* 按键当前状态（按下还是弹起） */
+..\Core\Bsp\src\bsp_uart_fifo.c: 0 warnings, 30 errors
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_uart.c...
+compiling bsp.c...
+..\Core\Bsp\inc\bsp_timer.h(33): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Mode;		/* 计数器模式，1次性 */
+..\Core\Bsp\inc\bsp_timer.h(34): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Flag;		/* 定时到达标志  */
+..\Core\Bsp\inc\bsp_timer.h(35): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t Count;	/* 计数器 */
+..\Core\Bsp\inc\bsp_timer.h(36): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t PreLoad;	/* 计数器预装值 */
+..\Core\Bsp\inc\bsp_timer.h(41): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayMS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(42): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayUS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(45): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StopTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(47): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_GetRunTime(void);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_led.h(19): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(20): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOff(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(21): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedToggle(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_key.h(85): error:  #79: expected a type specifier
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #90: function returning function is not allowed
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #168: a function type is not allowed here
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(87): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  Count;			/* 滤波器计数器 */
+..\Core\Bsp\inc\bsp_key.h(88): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongCount;		/* 长按计数器 */
+..\Core\Bsp\inc\bsp_key.h(89): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongTime;		/* 按键按下持续时间, 0表示不检测长按 */
+..\Core\Bsp\inc\bsp_key.h(90): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  State;			/* 按键当前状态（按下还是弹起） */
+..\Core\Bsp\bsp.c: 0 warnings, 30 errors
+compiling bsp_msg.c...
+..\Core\Bsp\inc\bsp_timer.h(33): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Mode;		/* 计数器模式，1次性 */
+..\Core\Bsp\inc\bsp_timer.h(34): error:  #20: identifier "uint8_t" is undefined
+  	volatile uint8_t Flag;		/* 定时到达标志  */
+..\Core\Bsp\inc\bsp_timer.h(35): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t Count;	/* 计数器 */
+..\Core\Bsp\inc\bsp_timer.h(36): error:  #20: identifier "uint32_t" is undefined
+  	volatile uint32_t PreLoad;	/* 计数器预装值 */
+..\Core\Bsp\inc\bsp_timer.h(41): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayMS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(42): error:  #20: identifier "uint32_t" is undefined
+  void bsp_DelayUS(uint32_t n);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(43): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(44): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartAutoTimer(uint8_t _id, uint32_t _period);
+..\Core\Bsp\inc\bsp_timer.h(45): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StopTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(46): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_CheckTimer(uint8_t _id);
+..\Core\Bsp\inc\bsp_timer.h(47): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_GetRunTime(void);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(48): error:  #20: identifier "int32_t" is undefined
+  int32_t bsp_CheckRunTime(int32_t _LastTime);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint8_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_timer.h(51): error:  #20: identifier "uint32_t" is undefined
+  void bsp_StartHardTimer(uint8_t _CC, uint32_t _uiTimeOut, void * _pCallBack);
+..\Core\Bsp\inc\bsp_led.h(19): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(20): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedOff(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(21): error:  #20: identifier "uint8_t" is undefined
+  void bsp_LedToggle(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_led.h(22): error:  #20: identifier "uint8_t" is undefined
+  uint8_t bsp_IsLedOn(uint8_t _no);
+..\Core\Bsp\inc\bsp_key.h(85): error:  #79: expected a type specifier
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #90: function returning function is not allowed
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(85): error:  #168: a function type is not allowed here
+  	uint8_t (*IsKeyDownFunc)(void); /* 按键按下的判断函数,1表示按下 */
+..\Core\Bsp\inc\bsp_key.h(87): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  Count;			/* 滤波器计数器 */
+..\Core\Bsp\inc\bsp_key.h(88): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongCount;		/* 长按计数器 */
+..\Core\Bsp\inc\bsp_key.h(89): error:  #20: identifier "uint16_t" is undefined
+  	uint16_t LongTime;		/* 按键按下持续时间, 0表示不检测长按 */
+..\Core\Bsp\inc\bsp_key.h(90): error:  #20: identifier "uint8_t" is undefined
+  	uint8_t  State;			/* 按键当前状态（按下还是弹起） */
+..\Core\Bsp\bsp_msg.c: 0 warnings, 30 errors
+compiling stm32f1xx_hal_exti.c...
+compiling system_stm32f1xx.c...
+"Soft_Systick\Soft_Systick.axf" - 180 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Soft_Systick
+  C:\Users\ALanStewart\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\ALanStewart\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
